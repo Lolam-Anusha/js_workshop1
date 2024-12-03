@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #name, #start, #score{
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <h1>Advnaced JavaScript Quiz</h1>
+        <input type="text" id="inputId" placeholder="Enter your name"> <br>
+        <button id="name">Random Name</button> <br>
+        <button id="start">Start quiz</button> <br>
+        <button id="score">View High Scores</button>
+    </div>
+
+    <script>
+        let inputBox = document.getElementById("inputId").value
+        let randomBtn = document.getElementById("name")
+        let startBtn = document.getElementById("start")
+        randomBtn.addEventListener("click", ()=>{
+            const randomNames = ["john", "Alice", "Bob", "anu","ram","jyo"];
+            if(inputBox=" "){
+                for(i=0;i<randomNames.length;i++){
+                inputBox.value=randomNames[i];
+            }
+            }
+            
+            // console.log(inputBox)
+            
+        })
+        
+        startBtn.addEventListener("click",()=>{     
+            // if(inputBox=" "){
+            //     alert(`Please enter your name before starting the quiz.`)
+            // }
+            // else{
+            //     window.location.href="question1.html"
+            // }
+            window.location.href="question1.html"
+        })
+
+        
+    </script>
+</body>
+</html>
